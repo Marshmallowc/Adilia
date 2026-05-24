@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/tools/screen-recorder/:path*",
-      "destination": "https://your-screen-recorder-project.vercel.app/:path*"
+      "destination": "https://screen-recorder-eta-five.vercel.app/:path*"
     }
   ]
 }

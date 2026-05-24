@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/blog/graduation-project-traps-2026",
     "/blog/mini-program-pricing-and-architecture",
     "/blog/llm-rag-architecture-landing-2026",
+    "/tools/screen-recorder",
   ];
 
   return routes.map((route) => ({
