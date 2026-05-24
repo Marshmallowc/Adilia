@@ -174,7 +174,7 @@ export default function HomePage() {
 
           {/* Social Links Fixed bottom */}
           <div className="flex items-center gap-4 text-xs font-bold text-slate-400 select-none">
-            <a href="https://github.com/leochen-dev" target="_blank" rel="noopener" className="hover:text-slate-800 transition-colors">
+            <a href="https://github.com/Marshmallowc" target="_blank" rel="noopener" className="hover:text-slate-800 transition-colors">
               GitHub
             </a>
             <span className="text-slate-200">/</span>
