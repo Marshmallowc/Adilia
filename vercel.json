@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/tools/screen-recorder/:path*",
+      "destination": "https://your-screen-recorder-project.vercel.app/:path*"
+    }
+  ]
+}
