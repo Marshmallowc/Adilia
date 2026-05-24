@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Pure Light Theme Color Tokens */
+  --bg-primary: #f8fafc;        /* Slate-50 Warm Off-White */
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  
+  --border-card: rgba(15, 23, 42, 0.04);
+  --border-card-hover: rgba(99, 102, 241, 0.2);
+  
+  --text-primary: #0f172a;      /* Slate-900 */
+  --text-secondary: #475569;    /* Slate-600 */
+  --text-muted: #94a3b8;        /* Slate-400 */
+  
+  --color-indigo: #4f46e5;
+  --color-teal: #0f766e;
+  
+  --font-geist: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================= CURSOR SPOTLIGHT TRACKING EFFECT ================= */
+.spotlight-wrapper {
+  background: radial-gradient(
+    600px at var(--x, 0px) var(--y, 0px),
+    rgba(99, 102, 241, 0.05) 0%,
+    rgba(20, 184, 166, 0.02) 40%,
+    transparent 80%
+  ), var(--bg-primary);
+  min-height: 100vh;
+  transition: background 0.1s ease;
+}
+
+/* ================= ULTRA-WHITE GLASS PANEL ================= */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.015), 0 1px 3px rgba(15, 23, 42, 0.005);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ================= DYNAMIC LIST GROUP HOVER DIMMING ================= */
+.group-hover-list:hover .group-hover-item {
+  opacity: 0.45;
+  filter: blur(0.3px);
+}
+
+.group-hover-list .group-hover-item {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group-hover-list .group-hover-item:hover {
+  opacity: 1 !important;
+  filter: none !important;
+  border-color: var(--border-card-hover);
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.05), 0 1px 5px rgba(99, 102, 241, 0.01);
+}
+
+/* ================= NAVIGATION ACTIVE LINE STRETCH ================= */
+.nav-line {
+  height: 1px;
+  background-color: #94a3b8; /* Slate-400 */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-item:hover .nav-line {
+  width: 48px;
+  background-color: #0f172a;
+}
+
+.nav-link-item-active .nav-line {
+  width: 64px;
+  background-color: #0f172a;
+  height: 2px;
+}
+
+.nav-link-item-active .nav-text {
+  color: #0f172a !important;
+  font-weight: 800;
+}
+
+/* Custom springs */
+.spring-tag {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.spring-tag:hover {
+  transform: scale(1.06) translateY(-1px);
+  background-color: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--color-indigo);
+}
+
+.text-glow-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #4f46e5 50%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
